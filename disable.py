@@ -1,4 +1,5 @@
-# Credit To Azael#1111 (https://github.com/azaelgg)
+# Credit To Azael#1111 For Help (https://github.com/azaelgg)
+# Found By Jinxy#1800 & Azael#1111
 import requests
 import os
 
