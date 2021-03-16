@@ -1,6 +1,14 @@
 # Account Disabler
 Ayo, was coding something for a friend and found this method of account disabling accidentally, thank you to Azael#1111 for helping with the original idea of the script.
-
 ### Information
 - Date Found: 16/03/2021
 - Found By: Jinxy#1800 & Azael#1111
+### How Does It Work?
+It sends friend requests to people through requests and after about 2 friend requests the account gets disabled or phone locked. I tested this earlier and my account got disabled within less than a minute, I wasn't timing as it was unintentional. This method can be used to lock people out their accounts to annoy them or just to be a cunt, your choice.
+### Usage
+1. Download all the files and make sure they are all in the same folder.
+2. Open up the **.env** and put the token you want to disable/lock in it.
+3. Put some users in the **users.txt** file, they can be random user names of anyone.
+4. Now run the **disable.py** using the terminal, for example: **python disable.py**.
+5. When you are ready just press enter as prompted to and it should start saying **Username#1336 Added!**.
+6. After about 2-4 accounts, you should be locked out of the account/disabled.
