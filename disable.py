@@ -3,14 +3,12 @@
 import requests
 import os
 
-from dotenv import load_dotenv
 from colorama import Fore, init
 
-load_dotenv()
 init(convert=True)
 clear = lambda: os.system('cls')
 
-token = os.environ["TOKEN"]
+token = os.getenv('TOKEN')
 
 headers = {'Authorization': token, 'Content-Type': 'application/json'}
 res = requests.get('https://canary.discordapp.com/api/v6/users/@me', headers=headers)
