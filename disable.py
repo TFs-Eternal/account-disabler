@@ -36,7 +36,7 @@ def disable():
     for username in open('users.txt', 'r').read().splitlines():
         try:
             usr = username.split('#')
-            r = requests.post('https://discord.com/api/v8/users/@me/relationships', headers={'Authorization': token, 'Content-Type': 'application/json'}, json={'username': usr[0], 'discriminator': usr[1]})
+            r = requests.post('https://discord.com/api/v8/users/@me/relationships', headers=headers, json={'username': usr[0], 'discriminator': usr[1]})
             print(f"[{Fore.GREEN}{r.status_code}{Fore.RESET}] {Fore.LIGHTBLACK_EX}{usr[0]}#{usr[1]} Added!{Fore.RESET}")
         except:
             print(f"[{Fore.RED}!{Fore.RESET}]{Fore.LIGHTBLACK_EX} Something Went Wrong!{Fore.RESET}")
