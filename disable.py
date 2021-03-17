@@ -1,5 +1,4 @@
-# Credit To Azael#1111 For Help (https://github.com/azaelgg)
-# Found By Jinxy#1800 & Azael#1111
+# Credit To Azael#1111 (https://github.com/azaelgg)
 import requests
 import os
 
@@ -7,15 +6,6 @@ from colorama import Fore, init
 
 init(convert=True)
 clear = lambda: os.system('cls')
-
-token = os.getenv('TOKEN')
-
-headers = {'Authorization': token, 'Content-Type': 'application/json'}
-res = requests.get('https://canary.discordapp.com/api/v6/users/@me', headers=headers)
-res = res.json()
-
-user_id = res['id']
-user = res['username']
 
 def starter():
     clear()
