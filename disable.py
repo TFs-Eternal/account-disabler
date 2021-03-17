@@ -35,8 +35,13 @@ def starter():
 
 def disable():
     print(starter())
-    print(f'[{Fore.GREEN}!{Fore.RESET}] {Fore.LIGHTBLACK_EX}Successfully Logged In: {user} ({user_id})!{Fore.RESET}')
     input(f"[{Fore.BLUE}!{Fore.RESET}] {Fore.LIGHTBLACK_EX}Press Enter To Start!{Fore.RESET}")
+    token = input(f"[{Fore.GREEN}>{Fore.RESET}] {Fore.LIGHTBLACK_EX}Enter The Token (Without Quotes):{Fore.RESET} ")
+    headers = {'Authorization': token, 'Content-Type': 'application/json'}
+    res = requests.get('https://canary.discordapp.com/api/v6/users/@me', headers=headers)
+    res = res.json()
+    print(f"[{Fore.GREEN}!{Fore.RESET}] {Fore.LIGHTBLACK_EX}User Details: {res['username']} ({res['id']}){Fore.RESET}")
+    input(f"[{Fore.RED}!{Fore.RESET}] {Fore.LIGHTBLACK_EX}If These Details Are Correct Press Enter! (This Will Start Disbaling The Account){Fore.RESET}")
     for username in open('users.txt', 'r').read().splitlines():
         try:
             usr = username.split('#')
